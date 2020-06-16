@@ -8,7 +8,7 @@ import random
 # Notifying user with the credits and stuff
 print("Hello, and welcome to RockPaperScissors, credits to @abhishekshahane, v1.0")
 print("You are currently using v1.0. This version will be updated soon to v2.0!")
-print("Use 'git pull' for updating v2.0 as soon as it comes out.")
+print("Use 'git pull' for updating v1.0 to v2.0 as soon as it comes out.")
 # List, input and random.choice(list)
 list = ["Rock","Paper", "Scissors"]
 a=input("Enter a option(First letter in caps):  ")

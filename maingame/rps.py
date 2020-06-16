@@ -2,10 +2,11 @@
 #Using the random library
 #v 1.0: added main game functions, basic gameplay
 #v 2.0: Will add play again option. Also maybe runtime.
+from timeit import default_timer as timer
 
+start = timer()
 #importing random for random.choice()
 def play_rps():
-
     import random
     # Notifying user with the credits and stuff
     print("Hello, and welcome to RockPaperScissors, credits to @abhishekshahane, v1.0")
@@ -48,8 +49,9 @@ def play_rps():
         if playA == "y":
             play_rps()
         else:
+            end = timer()
+            print(f"You spent {str((end - start))[:3]} seconds playing this game")
             exit()
 
 play_rps()
 # Calling them at the end of this process
-            

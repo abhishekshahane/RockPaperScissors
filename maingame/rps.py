@@ -1,7 +1,7 @@
 #A simple little game using Python
 #Using the random library
 #v 1.0: added main game functions, basic gameplay
-#v 2.0: Will add play again option. Also maybe runtime.
+#v 2.0: Will add play again option. Also added runtime(total time spent playing the game).
 from timeit import default_timer as timer
 
 start = timer()
@@ -9,9 +9,10 @@ start = timer()
 def play_rps():
     import random
     # Notifying user with the credits and stuff
-    print("Hello, and welcome to RockPaperScissors, credits to @abhishekshahane, v1.0")
-    print("You are currently using v1.0. This version will be updated soon to v2.0!")
-    print("Use 'git pull' for updating v1.0 to v2.0 as soon as it comes out.")
+    print("Hello, and welcome to RockPaperScissors, credits to @abhishekshahane, v2.0")
+    print("You are currently using v2.0. No further updates planned as of now.")
+    print("v1.0->v2.0")
+    print("Use 'git pull' to update your version of RockPaperScissors to v2.0")
     # List, input and random.choice(list)
     list = ["Rock","Paper", "Scissors"]
     a=input("Enter a option(First letter in caps):  ")

@@ -20,6 +20,7 @@ def play_rps():
     #Making function errorcheckin
     if (a not in list):
         def errorchecking(a):
+
             print("Please enter a valid value.")
             print("If you want to play again, run python rps.py")
             exit()
@@ -28,31 +29,41 @@ def play_rps():
     # Making main game function
     elif (a in list):
         def rpsmain(a,b):
+            score = 0
+            
+            
             b = random.choice(list)
             if b=="Scissors" and a=="Paper":
                 print("Computer won, now exiting")
+                score -=1
             elif b=="Paper" and a=="Rock":
                 print("Computer won, now exiting")
+                score -=1
             elif b=="Rock" and a=="Scissors":
                 print("Computer won, now exiting")
+                score-=1
             elif a=="Scissors" and b=="Paper":
                 print("You won, now exiting")
+                score +=1
             elif a=="Paper" and b=="Rock":
                 print("You won, now exiting")
+                score+=1
             elif a=="Rock" and b=="Scissors":
                 print("You won, now exiting")
+                score+=1
             elif a==b:
                 print("Tie")
+            playA = input("Do you want to play again (y/n) ?").lower()
+            if playA == "y":
+                play_rps()
+            else:
+                end = timer()
+                x = input("Enter your name: ")
+                print(f"Your score is {score}")
+                print(f"{x} spent {str((end - start))[:3]} seconds playing this game, now exiting.")
+                exit()
 
         rpsmain(a,b)
-
-        playA = input("Do you want to play again (y/n) ?").lower()
-        if playA == "y":
-            play_rps()
-        else:
-            end = timer()
-            print(f"You spent {str((end - start))[:3]} seconds playing this game")
-            exit()
 
 play_rps()
 # Calling them at the end of this process

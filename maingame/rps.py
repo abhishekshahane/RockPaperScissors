@@ -3,7 +3,7 @@
 #v 1.0: added main game functions, basic gameplay
 #v 2.0: Will add play again option. Also added runtime(total time spent playing the game).
 from timeit import default_timer as timer
-
+import random
 start = timer()
 #importing random for random.choice()
 def play_rps():
@@ -17,7 +17,7 @@ def play_rps():
     list = ["Rock","Paper", "Scissors"]
     a=input("Enter a option(First letter in caps):  ")
     b = random.choice(list)
-    #Making function errorcheckin
+    #Making function errorchecking
     if (a not in list):
         def errorchecking(a):
 
@@ -35,24 +35,32 @@ def play_rps():
             b = random.choice(list)
             if b=="Scissors" and a=="Paper":
                 print("Computer won, now exiting")
-                score -=1
+                print(f"Computer chose {b}")
+                score-=1
             elif b=="Paper" and a=="Rock":
                 print("Computer won, now exiting")
-                score -=1
+                print(f"Computer chose {b}")
+                score-=1
             elif b=="Rock" and a=="Scissors":
                 print("Computer won, now exiting")
+                print(f"Computer chose {b}")
                 score-=1
             elif a=="Scissors" and b=="Paper":
                 print("You won, now exiting")
+                print(f"Computer chose {b}")
                 score +=1
             elif a=="Paper" and b=="Rock":
                 print("You won, now exiting")
+                print(f"Computer chose {b}")
                 score+=1
             elif a=="Rock" and b=="Scissors":
                 print("You won, now exiting")
+                print(f"Computer chose {b}")
                 score+=1
             elif a==b:
                 print("Tie")
+                print(f"Computer chose {b}")
+                score+=0
             playA = input("Do you want to play again (y/n) ?").lower()
             if playA == "y":
                 play_rps()
@@ -67,3 +75,4 @@ def play_rps():
 
 play_rps()
 # Calling them at the end of this process
+

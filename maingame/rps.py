@@ -48,7 +48,7 @@ def play_rps():
             elif a=="Scissors" and b=="Paper":
                 print("You won, now exiting")
                 print(f"Computer chose {b}")
-                score +=1
+                score+=1
             elif a=="Paper" and b=="Rock":
                 print("You won, now exiting")
                 print(f"Computer chose {b}")
@@ -75,4 +75,3 @@ def play_rps():
 
 play_rps()
 # Calling them at the end of this process
-
